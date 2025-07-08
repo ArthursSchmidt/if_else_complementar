@@ -13,11 +13,32 @@
     */
 
     //ENTRADA
-
+    const codigo = Number(prompt(`Qual o código do produto(de 1 a 20)`));
 
     //PROCESSAMENTO
 
     
     //SAÍDA
+    if (codigo === 1) {
+        alert(`Alimento não-perecível`)
+    }
+    else if (codigo === 2 || 3 || 4) {
+        alert(`Alimento perecível`)
+    }
+    else if (codigo === 5 || 6) {
+        alert(`Vestuário`)
+    }
+    else if (codigo === 7) {
+        alert(`Higiene Pessoal`)
+    }
+    else if (codigo >= 8 && codigo <= 15) {
+        alert(`Limpeza e Utensílios Domésticos`)
+    }
+    else if (codigo >= 16 && codigo <= 20) {
+        alert(`Outros`)
+    }
+    else {
+        alert(`Código inválido`)
+    };
 
 </script>
