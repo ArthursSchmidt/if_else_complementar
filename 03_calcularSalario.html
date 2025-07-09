@@ -15,11 +15,19 @@
     */
 
     //ENTRADA
-
+    const salario = Number((prompt(`qual o valor do seu salário?`)).replace("," , ""));
 
     //PROCESSAMENTO
+    const maior2 = 2000 * 0.10;
+    const maior4 = 4000 * 0.075;
+    const maior7 = 7000 * 0.05;
 
-    
     //SAÍDA
-
+    if(isNaN(salario)) {
+        alert(`digite um valor válido!`)
+    }
+    else if (salario > 2000 && salario < 4000) {
+        alert(`o seu salário será de ${maior2}`)
+    }
+    else if (salario >= 4000 && salario) {}
 </script>
