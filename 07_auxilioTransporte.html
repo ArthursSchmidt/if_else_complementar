@@ -11,12 +11,30 @@
     Calcule e apresente em tela o desconto, se existente, e o salário final recebido pelo funcionário.
     */
 
-    //ENTRADA
+       // ENTRADA
+    const salario = Number(prompt("Qual o seu salário mensal?"));
+    const querAuxilio = prompt("Você deseja receber auxílio transporte? (sim ou não)").toLowerCase();
+    const usaVeiculoProprio = prompt("Você utiliza veículo próprio para ir ao trabalho? (sim ou não)").toLowerCase();
 
+    let desconto = 0;
+    let adicional = 0;
+    let salarioFinal = salario;
 
-    //PROCESSAMENTO
+    // PROCESSAMENTO
 
-    
-    //SAÍDA
+    if (querAuxilio === "sim" || usaVeiculoProprio === "sim") {
+        desconto = salario * 0.06;
+        salarioFinal -= desconto;
+    }
 
+    if (usaVeiculoProprio === "sim") {
+        adicional = 200;
+    } else if (querAuxilio === "sim" && usaVeiculoProprio === "não") {
+        adicional = 150;
+    }
+
+    salarioFinal += adicional;
+
+    // SAÍDA
+    alert(`Desconto aplicado: R$ ${desconto.toFixed(2)}\nAdicional recebido: R$ ${adicional.toFixed(2)}\nSalário final: R$ ${salarioFinal.toFixed(2)}`);
 </script>
