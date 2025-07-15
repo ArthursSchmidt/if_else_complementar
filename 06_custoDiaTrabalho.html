@@ -15,11 +15,30 @@
     */
 
     //ENTRADA
-
+    const trabalho = prompt(`em que área você trabalha?(Motorista ou Cobrador)`).toUpperCase();
+    const viagens = Number(prompt(`quantas viagens você realizou?`));
 
     //PROCESSAMENTO
-
+    const motorista = (viagens * 100) * 1.20;
+    const motorista10 = (viagens * 100) * 1.35;
+    const cobrador = viagens * 100;
+    const cobrador10 = (viagens * 100) * 1.10;
     
     //SAÍDA
+    if (trabalho === `MOTORISTA` && viagens <= 10) {
+        alert(`seu cargo é ${trabalho} e você vai receber ${motorista}`)
+    }
+    else if (trabalho === `MOTORISTA` && viagens > 10) {
+        alert(`seu cargo é ${trabalho} e você vai receber ${motorista10}`)
+    }
+    else if (trabalho === `COBRADOR` && viagens <= 10) {
+        alert(`seu cargo é ${trabalho} e você vai receber ${cobrador}`)
+    }
+    else if (trabalho === `COBRADOR` && viagens > 10) {
+        alert(`seu cargo é ${trabalho} e você vai receber ${cobrador10}`)
+    }
+    else {
+        alert(`digite um valor válido para as respostas!`)
+    }
 
 </script>
