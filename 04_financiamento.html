@@ -10,11 +10,20 @@
     */
 
     //ENTRADA
-
+    const valorImovel = Number((prompt(`qual o valor do imóvel?`)).replace("," , "."));
+    const anos = Number(prompt(`o financiamento será realizado em quantos anos?`));
+    const salario = Number((prompt(`qual o seu salário?`)).replace("," , "."));
 
     //PROCESSAMENTO
-
+    const parcelas = anos * 12;
+    const prestacaoMensal = valorImovel / parcelas;
+    const limite = salario * 0.30;
     
     //SAÍDA
-
+    if (prestacaoMensal <= limite) {
+        alert(`Financiamento CONCEDIDO!`)
+    }
+    else{
+        alert(`Financiamento NEGADO! A parcela excede 30% do salário.`)
+    }
 </script>
