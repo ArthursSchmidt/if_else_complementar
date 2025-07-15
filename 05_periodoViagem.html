@@ -11,11 +11,28 @@
     */
 
     //ENTRADA
-
+    const distancia = Number((prompt(`qual a distância da viagem?`)).replace("," , "."));
+    const kmPdia = Number((prompt(`quantos quilômetros você pretende viajar por dia?`)).replace("," , "."));
+    
 
     //PROCESSAMENTO
+    const dias = Math.ceil(distancia / kmPdia);
 
     
     //SAÍDA
-
+    if (isNaN(distancia) && isNaN(kmPdia)) {
+        alert(`Digite valores válidos`)
+    }
+    else if (dias <= 3) {
+        alert(`A viagem poderá ser realizada em qualquer período`)
+    }
+    else if (dias <= 10) {
+        alert(`A viagem poderá ser realizada nas Férias de Julho`)
+    }
+    else if (dias <= 20) {
+        alert(`A viagem poderá ser realizada nas Férias de Verão`)
+    }
+    else {
+        alert(`Você deverá Trabalhar Remoto por ${dias} para poder concluir a viagem`)
+    }
 </script>
