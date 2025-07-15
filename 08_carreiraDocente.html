@@ -19,11 +19,28 @@
     */
 
     //ENTRADA
-
-
-    //PROCESSAMENTO
-
+    const anos = Number(prompt(`quantos anos de carreira você tem?`));
+    const projPesquisa = Number(prompt(`quantos projetos de pesquisas você já coordenou em sua carreira?`));
+    const projExtensao = Number(prompt(`quantos projetos de extensão você orientou?`));
+    const TC = Number(prompt(`quantos TCCs você já orientou?`));
     
+    //PROCESSAMENTO
+    const anoCarreira = 2.5 * anos;
+    const pesquisas = 5 * projPesquisa;
+    const extensao = 5 * projExtensao;
+    const tcc = 3 * TC;
+    const pontos = anoCarreira + pesquisas + extensao + tcc;
     //SAÍDA
-
+    if (pontos <= 30) {
+        alert (`você tem ${pontos} pontos, você é um "CONVIDADO"`)
+    }
+    else if (pontos < 50) {
+        alert(`você tem ${pontos} pontos, você é um "AGREGADO"`)
+    }
+    else if (pontos > 50) { 
+        alert(`você tem ${pontos} pontos, você é um "TITULAR"`)
+    }
+    else {
+        alert(`Digite valores válidos!`)
+    }
 </script>
