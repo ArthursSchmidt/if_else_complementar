@@ -12,11 +12,25 @@
     */
 
     //ENTRADA
-
+    const preco = Number(prompt(`qual o valor do computador?`));
+    const pagamento = prompt(`qual vai ser a forma de pagamento do cliente?("B" Boleto  "D" Dinheiro  "P" Pix)`).toUpperCase();
 
     //PROCESSAMENTO
-
+    const boleto = preco - (preco * 0.03);
+    const dinheiro = preco - (preco * 0.05);
+    const pix = preco - (preco * 0.10);
     
     //SAÍDA
-
+    if (pagamento === `B`) {
+        alert(`o valor final do produto será de R$${boleto}`)
+    }
+    else if (pagamento === `D`) {
+        alert(`o valor final do produto será de R$${dinheiro}`)
+    }
+    else if (pagamento === `P`) {
+        alert(`o valor final do produto será de R$${pix}`)
+    }
+    else {
+         alert("digite um preco valido, ou um pagamento válido");
+    }
 </script>
