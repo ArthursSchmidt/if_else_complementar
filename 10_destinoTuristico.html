@@ -1,4 +1,4 @@
-<meta charset="UTF-8" />
+<meta charset="UTF-8">
 <script>
     /*
     PROBLEMA: DESTINO TURÍSTICO
@@ -12,10 +12,15 @@
     */
 
     //ENTRADA
-
+    const precoTransporte1 = Number(prompt(`Qual o preço do transporte aéreo para São Paulo?`)).replace("," , ".");
+    const precoTransporte2 = Number(prompt(`Qual o preço do transporte aéreo para Rio de Janeiro?`)).replace("," , ".");
+    const precoHotel = Number(prompt(`Qual o preço do hotel para São Paulo?`)).replace("," , ".");
+    const precoHotel = Number(prompt(`Qual o preço do hotel para Rio de Janeiro?`)).replace("," , ".");
+    const dias = Number(prompt(`quantos dias pretende ficar no destino?`))
 
     //PROCESSAMENTO
-
+    const preco1 = precoTransporte - (precoHotel * dias);
+    const preco2 = preco
     
     //SAÍDA
 
